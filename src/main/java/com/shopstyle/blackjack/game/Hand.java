@@ -33,7 +33,7 @@ public class Hand {
     }
 
     public final Hand split() {
-        if (isPair()) {
+        if (!isPair()) {
             throw new RuntimeException("Can only split a hand with two cards. No more, no less.");
         }
         return new Hand(cards.pop());
